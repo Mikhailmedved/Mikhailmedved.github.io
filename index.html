@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ЧЕЛОВЕК — СЛАБОЕ ЗВЕНО | Социальная инженерия</title>
+<meta name="description" content="Исследовательский проект по информационной безопасности: социальная инженерия как угроза и методы защиты.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="grain"></div>
+<div class="scanlines"></div>
+
+<header class="nav" id="nav">
+  <a href="#top" class="logo" data-magnetic>
+    <span class="logo-mark"></span>
+    <span>HUMAN<span class="logo-dim">FIREWALL</span></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#threat" data-hover>Угроза</a>
+    <a href="#vectors" data-hover>Векторы</a>
+    <a href="#stats" data-hover>Статистика</a>
+    <a href="#defense" data-hover>Защита</a>
+    <a href="#sources" data-hover>Источники</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Меню">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#threat">Угроза</a>
+  <a href="#vectors">Векторы</a>
+  <a href="#stats">Статистика</a>
+  <a href="#defense">Защита</a>
+  <a href="#sources">Источники</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg-text" id="heroBgText">SE</div>
+  <div class="hero-grid-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal">
+      <span class="dot"></span> Проект по информационной безопасности
+    </div>
+    <h1 class="hero-title">
+      <span class="line"><span class="line-inner">Человек —</span></span>
+      <span class="line"><span class="line-inner">слабое <em>звено</em>.</span></span>
+    </h1>
+    <p class="hero-sub reveal">
+      Социальная инженерия — это взлом не системы, а человека.<br>
+      Пока код защищён шифрованием, доверием управляют эмоции.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#threat" class="btn btn-primary" data-magnetic data-hover>
+        <span>Изучить проблему</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#sources" class="btn btn-ghost" data-magnetic data-hover>
+        <span>Источники</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-terminal reveal">
+    <div class="term-head">
+      <span class="term-dots"><i></i><i></i><i></i></span>
+      <span class="term-title">attack_simulation.log</span>
+    </div>
+    <div class="term-body" id="termBody"></div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Прокрутить</span>
+    <div class="scroll-line"><i></i></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="marquee-section">
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>ФИШИНГ</span><span class="sep">✦</span>
+      <span>ПРЕТЕКСТИНГ</span><span class="sep">✦</span>
+      <span>ВИШИНГ</span><span class="sep">✦</span>
+      <span>ТЕЙЛГЕЙТИНГ</span><span class="sep">✦</span>
+      <span>BAITING</span><span class="sep">✦</span>
+      <span>ФИШИНГ</span><span class="sep">✦</span>
+      <span>ПРЕТЕКСТИНГ</span><span class="sep">✦</span>
+      <span>ВИШИНГ</span><span class="sep">✦</span>
+      <span>ТЕЙЛГЕЙТИНГ</span><span class="sep">✦</span>
+      <span>BAITING</span><span class="sep">✦</span>
+    </div>
+  </div>
+</section>
+
+<!-- THREAT -->
+<section class="threat" id="threat">
+  <div class="section-head">
+    <div class="section-label reveal"><span class="dot"></span> 01 — Проблема</div>
+    <h2 class="section-title reveal">Техника бессильна<br>против <em>доверия</em></h2>
+  </div>
+
+  <div class="threat-grid">
+    <div class="threat-text">
+      <p class="lead reveal">
+        Большинство успешных атак начинаются не с эксплойта, а с сообщения, звонка или письма,
+        которому человек поверил.
+      </p>
+      <p class="reveal">
+        Социальная инженерия (social engineering) — метод несанкционированного доступа к информации,
+        основанный на психологическом воздействии на людей. Злоумышленник не взламывает сервер —
+        он убеждает сотрудника самому передать пароль, открыть файл или перевести деньги.
+      </p>
+      <p class="reveal">
+        По данным Verizon DBIR, <strong>более 70% инцидентов</strong> с участием человека связаны с
+        социальной инженерией и ошибками, которых можно было избежать.
+      </p>
+      <div class="def-box reveal">
+        <span class="def-term">Определение</span>
+        <p>Социальная инженерия — совокупность психологических и организационных приёмов,
+        направленных на получение конфиденциальной информации путём эксплуатации человеческого фактора.</p>
+      </div>
+    </div>
+
+    <div class="threat-visual reveal">
+      <div class="radar">
+        <div class="radar-ring r1"></div>
+        <div class="radar-ring r2"></div>
+        <div class="radar-ring r3"></div>
+        <div class="radar-sweep"></div>
+        <div class="radar-center"></div>
+        <span class="radar-label">TRUST</span>
+      </div>
+      <div class="threat-caption">Доверие — вектор атаки</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" id="stats">
+  <div class="stat">
+    <div class="stat-num" data-count="74" data-suffix="%">0</div>
+    <div class="stat-label">инцидентов с участием человеческого фактора</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" data-count="3" data-suffix=" млрд">0</div>
+    <div class="stat-label">фишинговых писем ежедневно в мире</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" data-count="95" data-suffix="%">0</div>
+    <div class="stat-label">успешных атак начинаются с ошибки человека</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" data-count="60" data-suffix=" сек">0</div>
+    <div class="stat-label">среднее время до перехода по вредоносной ссылке</div>
+  </div>
+</section>
+
+<!-- VECTORS -->
+<section class="vectors" id="vectors">
+  <div class="section-head">
+    <div class="section-label reveal"><span class="dot"></span> 02 — Векторы атаки</div>
+    <h2 class="section-title reveal">Пять способов<br>обойти <em>защиту</em></h2>
+  </div>
+
+  <div class="vector-list">
+    <article class="vector-item reveal" data-hover>
+      <div class="vector-num">01</div>
+      <div class="vector-body">
+        <h3>Фишинг</h3>
+        <p>Поддельные письма и сайты, имитирующие доверенные сервисы. Цель — заставить ввести логин, пароль или данные карты.</p>
+        <div class="vector-tags"><span>email</span><span>спуфинг</span><span>клонирование</span></div>
+      </div>
+      <div class="vector-risk"><span>Риск</span><i class="bar"><b style="--w:92%"></b></i></div>
+    </article>
+
+    <article class="vector-item reveal" data-hover>
+      <div class="vector-num">02</div>
+      <div class="vector-body">
+        <h3>Претекстинг</h3>
+        <p>Злоумышленник придумывает легенду: «сотрудник банка», «системный администратор», «следователь». Сценарий продуман заранее.</p>
+        <div class="vector-tags"><span>соц. роль</span><span>скрипт</span><span>срочность</span></div>
+      </div>
+      <div class="vector-risk"><span>Риск</span><i class="bar"><b style="--w:88%"></b></i></div>
+    </article>
+
+    <article class="vector-item reveal" data-hover>
+      <div class="vector-num">03</div>
+      <div class="vector-body">
+        <h3>Вишинг</h3>
+        <p>Голосовой фишинг по телефону. Поддельный номер, давление авторитетом, просьба назвать код из СМС.</p>
+        <div class="vector-tags"><span>голос</span><span>подмена номера</span><span>2FA</span></div>
+      </div>
+      <div class="vector-risk"><span>Риск</span><i class="bar"><b style="--w:85%"></b></i></div>
+    </article>
+
+    <article class="vector-item reveal" data-hover>
+      <div class="vector-num">04</div>
+      <div class="vector-body">
+        <h3>Тейлгейтинг</h3>
+        <p>Проход на охраняемый объект вместе с сотрудником: «придержите дверь». Физическая версия социальной инженерии.</p>
+        <div class="vector-tags"><span>физика</span><span>бейдж</span><span>наблюдение</span></div>
+      </div>
+      <div class="vector-risk"><span>Риск</span><i class="bar"><b style="--w:64%"></b></i></div>
+    </article>
+
+    <article class="vector-item reveal" data-hover>
+      <div class="vector-num">05</div>
+      <div class="vector-body">
+        <h3>Baiting и кви-про-кво</h3>
+        <p>Соблазн получить «бесплатный курс» или обновление, либо предложение «помочь» с несуществующей проблемой.</p>
+        <div class="vector-tags"><span>USB</span><span>лазейка</span><span>обмен</span></div>
+      </div>
+      <div class="vector-risk"><span>Риск</span><i class="bar"><b style="--w:71%"></b></i></div>
+    </article>
+  </div>
+</section>
+
+<!-- PSYCHOLOGY -->
+<section class="psych">
+  <div class="psych-grid">
+    <div class="psych-left">
+      <div class="section-label reveal"><span class="dot"></span> 03 — Механика</div>
+      <h2 class="about-title reveal">Атакуют не<br><em>технику</em> — аффект</h2>
+      <p class="reveal psych-note">
+        В основе успеха — психологические «кнопки». Их немного, но они работают на всех.
+      </p>
+    </div>
+    <div class="psych-right">
+      <div class="psych-card reveal" data-hover>
+        <span class="psych-idx">A</span>
+        <h3>Авторитет</h3>
+        <p>Человеку проще подчиниться тому, кто выглядит как начальник, полиция или банк.</p>
+      </div>
+      <div class="psych-card reveal" data-hover>
+        <span class="psych-idx">B</span>
+        <h3>Срочность</h3>
+        <p>«Аккаунт удалят через 10 минут» — нет времени думать и проверять.</p>
+      </div>
+      <div class="psych-card reveal" data-hover>
+        <span class="psych-idx">C</span>
+        <h3>Социальное доказательство</h3>
+        <p>«Все уже подтвердили» — человек следует за группой, чтобы не выделяться.</p>
+      </div>
+      <div class="psych-card reveal" data-hover>
+        <span class="psych-idx">D</span>
+        <h3>Симпатия и выгода</h3>
+        <p>Комплимент, бонус, «только для вас» — и критическое мышление отключается.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEFENSE -->
+<section class="defense" id="defense">
+  <div class="section-head">
+    <div class="section-label reveal"><span class="dot"></span> 04 — Защита</div>
+    <h2 class="section-title reveal">Как построить<br><em>человеческий</em> файрвол</h2>
+  </div>
+
+  <div class="defense-grid">
+    <div class="def-item reveal" data-hover>
+      <span class="def-icon">01</span>
+      <h3>Проверяй канал</h3>
+      <p>Не действуй по инструкции из письма или звонка. Перезвони в компанию по номеру, который знаешь сам.</p>
+    </div>
+    <div class="def-item reveal" data-hover>
+      <span class="def-icon">02</span>
+      <h3>Коды — не для передачи</h3>
+      <p>Никто, включая «банк» и «поддержку», не должен просить код 2FA. Никогда.</p>
+    </div>
+    <div class="def-item reveal" data-hover>
+      <span class="def-icon">03</span>
+      <h3>Пауза — это протокол</h3>
+      <p>Срочность — главный признак атаки. Замедлись и не принимай решений под давлением.</p>
+    </div>
+    <div class="def-item reveal" data-hover>
+      <span class="def-icon">04</span>
+      <h3>Проверяй адрес и домен</h3>
+      <p>Одна буква в домене меняет всё. Наводи на ссылку и читай настоящий URL, а не текст.</p>
+    </div>
+    <div class="def-item reveal" data-hover>
+      <span class="def-icon">05</span>
+      <h3>Меньше публичных данных</h3>
+      <p>Соцсети — источник деталей для легенды: должность, начальник, проекты, отпуск.</p>
+    </div>
+    <div class="def-item reveal" data-hover>
+      <span class="def-icon">06</span>
+      <h3>Сообщай об инциденте</h3>
+      <p>Стыд — союзник атакующего. Быстрое сообщение о подозрительном контакте ломает сценарий.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-bg" id="ctaBg">STAY<br>HUMAN</div>
+  <div class="cta-inner">
+    <div class="section-label reveal"><span class="dot"></span> Вывод</div>
+    <h2 class="cta-title reveal">Безопасность<br>начинается с <em>вопроса</em>.</h2>
+    <p class="cta-sub reveal">Не «почему мне пишут?», а «как я могу это проверить?»</p>
+  </div>
+</section>
+
+<!-- SOURCES -->
+<section class="sources" id="sources">
+  <div class="section-head">
+    <div class="section-label reveal"><span class="dot"></span> Источники</div>
+    <h2 class="section-title reveal">Материалы <em>исследования</em></h2>
+  </div>
+  <div class="sources-list">
+    <a href="https://www.verizon.com/business/resources/reports/dbir/" target="_blank" rel="noopener" class="source-item reveal" data-hover>
+      <span class="source-idx">01</span>
+      <span class="source-name">Verizon Data Breach Investigations Report (DBIR)</span>
+      <span class="source-tag">отчёт</span>
+    </a>
+    <a href="https://www.ibm.com/reports/data-breach" target="_blank" rel="noopener" class="source-item reveal" data-hover>
+      <span class="source-idx">02</span>
+      <span class="source-name">IBM Cost of a Data Breach Report</span>
+      <span class="source-tag">исследование</span>
+    </a>
+    <a href="https://www.cisa.gov/" target="_blank" rel="noopener" class="source-item reveal" data-hover>
+      <span class="source-idx">03</span>
+      <span class="source-name">CISA — Cybersecurity and Infrastructure Security Agency</span>
+      <span class="source-tag">рекомендации</span>
+    </a>
+    <a href="https://www.kaspersky.ru/resource-center/threats/social-engineering" target="_blank" rel="noopener" class="source-item reveal" data-hover>
+      <span class="source-idx">04</span>
+      <span class="source-name">Kaspersky — Social Engineering</span>
+      <span class="source-tag">обзор</span>
+    </a>
+    <a href="https://www.anti-phishing.ru/" target="_blank" rel="noopener" class="source-item reveal" data-hover>
+      <span class="source-idx">05</span>
+      <span class="source-name">Anti-Phishing Working Group (APWG)</span>
+      <span class="source-tag">статистика</span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="logo-mark"></span> HUMAN<span class="logo-dim">FIREWALL</span>
+    </div>
+    <div class="footer-meta">
+      <span>Олимпиада по информатике · Информационная безопасность · 2026</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026. Исследовательский проект. Все примеры приведены в образовательных целях.</span>
+    <span>Stay human. Stay skeptical.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
